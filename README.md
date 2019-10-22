@@ -18,7 +18,7 @@ npx install-peerdeps --dev eslint-config-airbnb-base
 2. Deliver two features: **pattern reproduction** and **tile animation**.
 2. The capacity to understand written code and new tech. You should improve what is already written, **not** rewrite the game completely.
 3. **Clean and commented code**. Feel free to comment the existing code - it will be useful in understanding how it works.
-4. Basic git skills. It will be required that you upload your project to your own personal repository.
+4. Basic git skills. Your delivery should be done via a **public github repository**.
 
 ---
 
