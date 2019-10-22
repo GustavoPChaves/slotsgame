@@ -1,45 +1,62 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+## Starting your work on this test:
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+1. Install the latest version of [Cocos Creator](https://cocos2d-x.org/creator).
+2. [Download](https://bitbucket.org/inogames/tests/downloads/) a copy of this repository.
+3. [Read up](https://docs.cocos2d-x.org/creator/manual/en/getting-started/coding-setup.html) on the official guidelines.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
-
----
-
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+*You can use whatever IDE you are used to, however we do recommend using [VSCode](https://code.visualstudio.com) for the official integration and the correct node modules, installed with npm via the following commands in the project folder.*
+>
+```
+npm i -D eslint prettier eslint-plugin-prettier eslint-config-prettier typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser
+npx install-peerdeps --dev eslint-config-airbnb-base
+```
 
 ---
 
-## Create a file
+## What is expected of you?
 
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+1. **Working on the code from this repository**, improve a simple slots game.
+2. Deliver two features: **pattern reproduction** and **tile animation**.
+2. The capacity to understand written code and new tech. You should improve what is already written, **not** rewrite the game completely.
+3. **Clean and commented code**. Feel free to comment the existing code - it will be useful in understanding how it works.
+4. Basic git skills. It will be required that you upload your project to your own personal repository.
 
 ---
 
-## Clone a repository
+## What should you deliver?
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+### Simple patterns:
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+Currently, the game is capable of animating a 3x5 slot machine, displaying a set of random icons every time the spin ends. Your delivery should have the following behavior:
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+1. **50%** of the time it should return this random configuration of tiles.
+2. **33%** of the time it should display a single line of equal tiles.
+3. **10%** of the time it should display two lines of equal tiles.
+4. **7%** of the time all lines should show equal tiles.
+
+### Tile Animation:
+
+As it stands, nothing happens once the spin ends, whether or not it shows a pattern. Your game delivery should have the following behavior:
+
+1. If one of the patterns hardcoded previously is triggered, **every tile on that set** should display an animation.
+2. The glow animation for this is included within the project files as a **Spine** file *(Deactivate `Pre-multiplied Alpha` on the node for better results)*.
+3. This animation should only be stopped should the player spin the tiles again.
+
+*PS: Do not overthink this. It is not required that your code contemplates lines being formed in the 50% window, therefore it is not needed that you write a pattern recognizer.*
+
+---
+
+## What approach do we suggest?
+
+1. Install VSCode and npm dependencies.
+2. Get familiarized with Cocos Creator, and integrate VSCode with it.
+3. Open up the project in the engine. Play it.
+4. Try to figure out the relationships between the entities.
+5. Ready a cup of the beverage of your choice - preferably hot and non-alcoholic.
+6. Start breaking things down.
+
+---
+
+## That's it!
+
+Feel free to contact us should you face any blocking issues or difficulties that stop your progress. 
