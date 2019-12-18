@@ -18,18 +18,24 @@
   },
   "rules": {
     "indent": "warn",
+    "one-var": "warn",
     "camelcase": "warn",
-    "semi-style": "error",
     "comma-spacing": "warn",
-    "no-underscore-dangle": "off",
-    "@typescript-eslint/no-this-alias": "off",
     "import/no-unresolved": "off",
 
     "eqeqeq": "warn",
-    "one-var": "warn",
     "no-alert": "warn",
     "no-console": "warn",
+    "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
+
+    "@typescript-eslint/no-this-alias": "off",
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        "default": "generic"
+      }
+    ],
 
     "prettier/prettier": [
       "error",
