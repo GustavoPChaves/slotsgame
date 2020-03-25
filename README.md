@@ -7,8 +7,7 @@
 You can use whatever IDE you are used to, however we do recommend using [VSCode](https://code.visualstudio.com) for the official integration and the correct node modules, installed with npm init, or via the following commands in the project folder.
 
 ```
-npm i -D eslint prettier eslint-plugin-prettier eslint-config-prettier typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser
-npx install-peerdeps --dev eslint-config-airbnb-base
+npm install
 ```
 
 ---
