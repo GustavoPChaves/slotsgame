@@ -16,10 +16,9 @@ npm install
 
 1. **Working on the code from this repository**, improve a simple slots game.
 2. Deliver two features in the game: **pattern reproduction** and **tile animation**.
-3. Deliver one external feature, via a library of your choice: **log/graph generation**.
-4. The capacity to understand written code and new tech. You should improve what is already written, **not** rewrite the game completely.
-5. **Clean and commented code**. Feel free to comment the existing code - it will be useful in understanding how it works.
-6. Basic git skills. Your delivery should be done via a **public github repository**.
+3. The capacity to understand written code and new tech. You should improve what is already written, **not** rewrite the game completely.
+4. **Clean and commented code**. Feel free to comment the existing code - it will be useful in understanding how it works.
+5. Basic git skills. Your delivery should be done via a **public github repository**.
 
 ---
 
