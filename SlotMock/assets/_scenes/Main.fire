@@ -139,6 +139,12 @@
     "audioClick": {
       "__uuid__": "1e510565-b4bd-4a60-abbb-40cf59de10d5"
     },
+    "tileCount": 30,
+    "machineSize": {
+      "__type__": "cc.Vec2",
+      "x": 3,
+      "y": 5
+    },
     "_id": "c1/On+kmJPrbn61APvRgto"
   },
   {
@@ -408,7 +414,7 @@
       "array": [
         0,
         0,
-        533.4716487312143,
+        527.4094709047232,
         0,
         0,
         0,
@@ -1326,6 +1332,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "72KJxUzgxFe6Wxxp6GDCVo"
   },
   {
@@ -1538,6 +1545,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "55trL5VzNHKIRbpYoDdtKk"
   },
   {
@@ -1750,6 +1758,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "eb2UZqL9dF1q7G2JJxeT4+"
   },
   {
@@ -1962,6 +1971,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "bdR1glqDJMQJXZ1H2lOP4I"
   },
   {
@@ -2174,6 +2184,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "014J5vI1RCK5msnvd+jf0g"
   },
   {
@@ -2666,6 +2677,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "beTKBjnHlFxZOBpQLLTNX5"
   },
   {
@@ -2878,6 +2890,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "89dN2kROBMbqjSRfoDfzvM"
   },
   {
@@ -3090,6 +3103,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "b5ZZDQAVVE56BorGwmVQqv"
   },
   {
@@ -3302,6 +3316,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "cbt6j+oI1Nh4M//Pozb5+Z"
   },
   {
@@ -3514,6 +3529,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "13s08DGJlGP4+k8LSXBLa+"
   },
   {
@@ -4006,6 +4022,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "21qEcZertLWIHiYMOc73/9"
   },
   {
@@ -4218,6 +4235,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "ffz0jJ3nRFaabM5E6mo0ak"
   },
   {
@@ -4430,6 +4448,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "01RlTAtjtBoZD/TYblP4tZ"
   },
   {
@@ -4642,6 +4661,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "083eXi5vdNkqMA1SN/FH76"
   },
   {
@@ -4854,6 +4874,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "0bByoEOw1A4Kbw5z5bkbXn"
   },
   {
@@ -5346,6 +5367,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "e0XfE2gIRFNJMLlxLccm/F"
   },
   {
@@ -5558,6 +5580,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "3aspf48E9BtI5bi8h1rxv4"
   },
   {
@@ -5770,6 +5793,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "3an1Bhb5lFdb7VN9dqpqoc"
   },
   {
@@ -5982,6 +6006,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "74BY9ueQRDzJjgqmTtWDp9"
   },
   {
@@ -6194,6 +6219,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "a5mEvf2CVFyYhJo/HXJCeh"
   },
   {
@@ -6686,6 +6712,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "64ctJ1futIkYivSYx8Mog9"
   },
   {
@@ -6898,6 +6925,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "29vw3D3h9HH6R8EuX+srl4"
   },
   {
@@ -7110,6 +7138,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "e04H4rwadFAZR3alc6eILx"
   },
   {
@@ -7322,6 +7351,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "cciKA4IrdC16KZvMZ0ydE3"
   },
   {
@@ -7534,6 +7564,7 @@
         "__uuid__": "26a4af08-1209-403f-9a44-68fbde1047bd"
       }
     ],
+    "gfx": null,
     "_id": "f81wghg1JFAJiLsnH3lHJ9"
   },
   {
