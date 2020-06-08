@@ -8,10 +8,16 @@ export default class GameManager extends cc.Component {
   @property({ type: cc.AudioClip })
   audioClick = null;
 
+  @property({type: Number})
+  tileCount = 30;
+
+  @property({type: cc.v2})
+  machineSize = cc.v2(3, 5);
+
   private block = false;
 
   private result = null;
-
+  
   start(): void {
     this.machine.getComponent('Machine').createMachine();
   }
@@ -29,7 +35,7 @@ export default class GameManager extends cc.Component {
     if (this.machine.getComponent('Machine').spinning === false) {
       this.block = false;
       this.machine.getComponent('Machine').spin();
-      this.requestResult();
+      this.requestResult()
     } else if (!this.block) {
       this.block = true;
       this.machine.getComponent('Machine').lock();
@@ -38,20 +44,56 @@ export default class GameManager extends cc.Component {
 
   async requestResult(): Promise<void> {
     this.result = null;
-    this.result = await this.getAnswer();
+    this.result = await this.getAnswer()
   }
 
   getAnswer(): Promise<Array<Array<number>>> {
-    const slotResult = [];
+    let slotResult: Array<Array<number>> = []
     return new Promise<Array<Array<number>>>(resolve => {
       setTimeout(() => {
+        let equalLines = this.getRandomEqualLines(0, this.machineSize.x)
+        slotResult = this.getResultWithEqualLines(equalLines, this.machineSize)
         resolve(slotResult);
       }, 1000 + 500 * Math.random());
     });
   }
 
   informStop(): void {
-    const resultRelayed = this.result;
+    let resultRelayed = this.result; 
     this.machine.getComponent('Machine').stop(resultRelayed);
   }
+
+  getRandomEqualLines(linesCount: number, lineSize: number): Array<number>{
+    let equalLines = Array(lineSize).fill(0).map((v,i)=>i);
+    equalLines = this.shuffleArray(equalLines);
+    return equalLines.slice(0, linesCount);
+  }
+
+  getResultWithEqualLines(equalLines: Array<number>, machineSize: cc.Vec2): Array<Array<number>> {
+    if(equalLines.length == 0){
+      return []
+    }
+    const slotResult = Array(machineSize.y).fill(Array(machineSize.x).fill(-1));
+    let value = 0;
+    equalLines.forEach(pivvot => {
+      value = this.getRandomInt(0, this.tileCount - 1);
+      for (let index = 0; index < machineSize.y; index++) {
+        slotResult[index][pivvot] = value;
+      }
+    });
+    return slotResult;
+  }
+
+  getRandomInt(min, max): number {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+  shuffleArray(array: Array<number>): Array<number> {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    };
+    return array;
+  }
+
 }

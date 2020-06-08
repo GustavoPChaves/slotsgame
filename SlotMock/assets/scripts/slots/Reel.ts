@@ -61,7 +61,7 @@ export default class Reel extends cc.Component {
     const el = element;
     const dirModifier = this.spinDirection === Aux.Direction.Down ? -1 : 1;
     if (el.position.y * dirModifier > 288) {
-      el.position = cc.v2(0, -288 * dirModifier);
+      el.position = cc.v3(0, -288 * dirModifier);
 
       let pop = null;
       if (this.result != null && this.result.length > 0) {
