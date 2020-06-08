@@ -101,14 +101,13 @@ export default class Machine extends cc.Component {
 
   private stopReel(theReel: any, result: number[], spinDelay: number) {
     if(result){
-      var res = result.slice()
+      var res = result.slice();
     }
     else{
-      res = null
+      res = null;
     }
     setTimeout(() => {
       theReel.readyStop(res);
-      cc.log(res)
     }, spinDelay * 1000);
   }
 }

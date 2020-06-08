@@ -17,6 +17,8 @@ export default class GameManager extends cc.Component {
   private block = false;
 
   private result = null;
+
+  private probability = [50, 33, 10, 7]
   
   start(): void {
     this.machine.getComponent('Machine').createMachine();
@@ -51,7 +53,8 @@ export default class GameManager extends cc.Component {
     let slotResult: Array<Array<number>> = []
     return new Promise<Array<Array<number>>>(resolve => {
       setTimeout(() => {
-        let equalLines = this.getRandomEqualLines(0, this.machineSize.x)
+        let pattern = this.getRandomPattern()
+        let equalLines = this.getRandomEqualLines(pattern, this.machineSize.x)
         slotResult = this.getResultWithEqualLines(equalLines, this.machineSize)
         resolve(slotResult);
       }, 1000 + 500 * Math.random());
@@ -71,7 +74,7 @@ export default class GameManager extends cc.Component {
 
   getResultWithEqualLines(equalLines: Array<number>, machineSize: cc.Vec2): Array<Array<number>> {
     if(equalLines.length == 0){
-      return []
+      return [];
     }
     const slotResult = Array(machineSize.y).fill(Array(machineSize.x).fill(-1));
     let value = 0;
@@ -96,4 +99,14 @@ export default class GameManager extends cc.Component {
     return array;
   }
 
+  getRandomPattern(): number{
+    let occurrence = 0;
+    let random = this.getRandomInt(0, 99);
+    for (let index = 3; index >=0; index--) {
+      occurrence += this.probability[index];
+      if( random <= occurrence)
+        return index;
+    }
+    return 0;
+  }
 }
