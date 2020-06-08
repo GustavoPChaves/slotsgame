@@ -46,16 +46,16 @@ export default class GameManager extends cc.Component {
 
   async requestResult(): Promise<void> {
     this.result = null;
-    this.result = await this.getAnswer()
+    this.result = await this.getAnswer();
   }
 
   getAnswer(): Promise<Array<Array<number>>> {
-    let slotResult: Array<Array<number>> = []
+    let slotResult: Array<Array<number>> = [];
     return new Promise<Array<Array<number>>>(resolve => {
       setTimeout(() => {
-        let pattern = this.getRandomPattern()
-        let equalLines = this.getRandomEqualLines(pattern, this.machineSize.x)
-        slotResult = this.getResultWithEqualLines(equalLines, this.machineSize)
+        let pattern = this.getRandomPattern();
+        let equalLines = this.getRandomEqualLines(pattern, this.machineSize.x);
+        slotResult = this.getResultWithEqualLines(equalLines, this.machineSize);
         resolve(slotResult);
       }, 1000 + 500 * Math.random());
     });

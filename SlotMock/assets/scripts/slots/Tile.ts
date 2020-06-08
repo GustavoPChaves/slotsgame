@@ -55,9 +55,9 @@ export default class Tile extends cc.Component {
     else{
       this.gfx.parent = null;
     }
-    this.gfx.active = false
+    this.gfx.active = false;
   }
   activeGFX(): void{
-    this.gfx.active = true
+    this.gfx.active = true;
   }
 }

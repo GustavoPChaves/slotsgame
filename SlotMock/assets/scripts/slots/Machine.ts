@@ -110,7 +110,7 @@ export default class Machine extends cc.Component {
     return new Promise(function (resolve, reject) {
       setTimeout(() => {
         theReel.readyStop(res);
-        resolve()
+        resolve();
       }, spinDelay * 1000);
     });
   }
