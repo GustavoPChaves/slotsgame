@@ -88,6 +88,7 @@ export default class Machine extends cc.Component {
       this.spinning = false;
       this.button.getComponent(cc.Button).interactable = true;
       this.button.getChildByName('Label').getComponent(cc.Label).string = 'SPIN';
+      this.showGFX();
     }, 2500);
 
     const rngMod = Math.random() / 2;
@@ -99,15 +100,24 @@ export default class Machine extends cc.Component {
     }
   }
 
-  private stopReel(theReel: any, result: number[], spinDelay: number) {
+  private stopReel(theReel: any, result: number[], spinDelay: number): Promise<void> {
     if(result){
       var res = result.slice();
     }
     else{
       res = null;
     }
-    setTimeout(() => {
-      theReel.readyStop(res);
-    }, spinDelay * 1000);
+    return new Promise(function (resolve, reject) {
+      setTimeout(() => {
+        theReel.readyStop(res);
+        resolve()
+      }, spinDelay * 1000);
+    });
+  }
+
+  showGFX(): void{
+    for (let i = 0; i < this.numberOfReels; i += 1) {
+      this.reels[i].getComponent('Reel').showGFX();
+    }
   }
 }

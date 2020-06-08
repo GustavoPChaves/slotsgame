@@ -70,6 +70,7 @@ export default class Reel extends cc.Component {
 
       if (pop != null && pop >= 0) {
         el.getComponent('Tile').setTile(pop);
+        el.getComponent('Tile').showGFX(true);
       } else {
         el.getComponent('Tile').setRandom();
       }
@@ -91,12 +92,13 @@ export default class Reel extends cc.Component {
 
     this.reelAnchor.children.forEach(element => {
       const dirModifier = this.spinDirection === Aux.Direction.Down ? -1 : 1;
-
+      
       const delay = cc.tween(element).delay(windUp);
       const start = cc.tween(element).by(0.25, { position: cc.v2(0, 144 * dirModifier) }, { easing: 'backIn' });
       const doChange = cc.tween().call(() => this.changeCallback(element));
       const callSpinning = cc.tween(element).call(() => this.doSpinning(element, 5));
-
+      
+      element.getComponent('Tile').showGFX(false);
       delay
         .then(start)
         .then(doChange)
@@ -122,7 +124,8 @@ export default class Reel extends cc.Component {
     const move = cc.tween(element).by(0.04, { position: cc.v2(0, 144 * dirModifier) });
     const doChange = cc.tween().call(() => this.changeCallback(element));
     const end = cc.tween().by(0.2, { position: cc.v2(0, 144 * dirModifier) }, { easing: 'bounceOut' });
-
+    
+    
     move
       .then(doChange)
       .then(move)
@@ -130,5 +133,11 @@ export default class Reel extends cc.Component {
       .then(end)
       .then(doChange)
       .start();
+  }
+
+  showGFX(): void{
+    this.reelAnchor.children.forEach(element => {
+      element.getComponent('Tile').activeGFX();
+    });
   }
 }

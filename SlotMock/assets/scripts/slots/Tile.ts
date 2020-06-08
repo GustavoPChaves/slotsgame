@@ -5,8 +5,7 @@ export default class Tile extends cc.Component {
   @property({ type: [cc.SpriteFrame], visible: true })
   private textures = [];
 
-  @property({type: cc.Prefab})
-  private gfx = null
+  private gfx = null;
 
   async onLoad(): Promise<void> {
     await this.loadTextures();
@@ -51,10 +50,14 @@ export default class Tile extends cc.Component {
   showGFX(option: boolean){
     if(option){
       this.node.addChild(this.gfx);
-      this.gfx.setPosition(0, this.node.y/3);
+      this.gfx.setPosition(0, 0);
     }
     else{
-      this.gfx.parent = null
+      this.gfx.parent = null;
     }
+    this.gfx.active = false
+  }
+  activeGFX(): void{
+    this.gfx.active = true
   }
 }
